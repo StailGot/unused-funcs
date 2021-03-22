@@ -38,7 +38,7 @@ void FuncInfo::processDeclaration(const clang::FunctionDecl &func,
   }
 
   clang::FullSourceLoc fullLoc(func.getNameInfo().getBeginLoc(), sm);
-  fileName = sm.getFilename(fullLoc);
+  fileName = sm.getFilename(fullLoc).str();
   lineNum = fullLoc.getSpellingLineNumber();
 }
 

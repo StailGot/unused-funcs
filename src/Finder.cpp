@@ -129,7 +129,7 @@ Finder::Impl::~Impl() {
 
 MatchFinder &Finder::Impl::getMatchFinder() { return matchFinder; }
 
-Finder::Finder() : impl(llvm::make_unique<Impl>()) {}
+Finder::Finder() : impl(std::make_unique<Impl>()) {}
 Finder::~Finder() = default;
 
 MatchFinder &Finder::getMatchFinder() { return impl->getMatchFinder(); }

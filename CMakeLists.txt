@@ -6,4 +6,4 @@ add_clang_executable(unused-funcs
                      src/Finder.cpp
                      src/FuncInfo.cpp
                      src/RefInfo.cpp)
-target_link_libraries(unused-funcs clangTooling clangBasic clangASTMatchers)
+target_link_libraries(unused-funcs PRIVATE clangTooling clangBasic clangASTMatchers)

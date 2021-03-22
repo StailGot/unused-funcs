@@ -28,7 +28,7 @@ namespace {
 std::string getFilename(const clang::DeclRefExpr &ref,
                         const clang::SourceManager &sm) {
   clang::FullSourceLoc fullLoc(ref.getExprLoc(), sm);
-  return sm.getFilename(fullLoc);
+  return sm.getFilename(fullLoc).str();
 }
 } // namespace
 
